@@ -62,14 +62,15 @@
   $threshold: $yiq-contrasted-threshold
 ) {
   $red: red($color);
-  $green: green($color);
-  $blue: blue($color);
-
-  $yiq: (($red*299)+($green*587)+($blue*114))/1000;
-
+  $green: color.channel($color, "green", $space: rgb);  // `green()` yerine `color.channel()` kullanıldı
+  $blue: color.channel($color, "blue", $space: rgb);   // `blue()` yerine `color.channel()` kullanıldı
+  
+  $yiq: math.div(($red*299)+($green*587)+($blue*114), 1000);  // `/` yerine `math.div()` kullanıldı
+  
   @if $yiq-debug { @debug $yiq, $threshold; }
-
+  
   @return if($yiq >= $threshold, true, false);
+  
 }
 
 @function yiq-contrast-color(
