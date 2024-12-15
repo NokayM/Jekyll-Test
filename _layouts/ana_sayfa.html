@@ -1,41 +1,77 @@
-<!-- _layouts/ana_sayfa.html -->
----
-layout: default
-title: "Ana Sayfa"
----
+@import "custom"; // Genel stil
+@import "header"; // Header için özel stil
 
-{% include header.html %}
+/* Hero Bölümü */
+.hero {
+  background-image: url('https://via.placeholder.com/1500x800');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 100px 0;
+}
 
-<main>
-  <div class="hero">
-    <div class="hero__content">
-      <h1>Hoş Geldiniz!</h1>
-      <p>Bizimle işlerinizi kolaylaştırın.</p>
-    </div>
-  </div>
+.hero__content h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
 
-  <section class="services">
-    <div class="container">
-      <h2>Hizmetlerimiz</h2>
-      <div class="service-block">
-        <div class="service-card">
-          <img src="https://via.placeholder.com/300" alt="Hizmet 1">
-          <h3>Hizmet 1</h3>
-          <p>Açıklama 1</p>
-        </div>
-        <div class="service-card">
-          <img src="https://via.placeholder.com/300" alt="Hizmet 2">
-          <h3>Hizmet 2</h3>
-          <p>Açıklama 2</p>
-        </div>
-        <div class="service-card">
-          <img src="https://via.placeholder.com/300" alt="Hizmet 3">
-          <h3>Hizmet 3</h3>
-          <p>Açıklama 3</p>
-        </div>
-      </div>
-    </div>
-  </section>
-</main>
+.hero__content p {
+  font-size: 1.5em;
+}
 
-{% include footer.html %}
+/* Hizmetler Bölümü */
+.services {
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.services h2 {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+.service-block {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  flex: 1;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.service-card img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.service-card h3 {
+  margin-top: 20px;
+  font-size: 1.8em;
+}
+
+.service-card p {
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+}
