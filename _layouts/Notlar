@@ -1,0 +1,24 @@
+/proje-adi
+├── _config.yml          # Jekyll yapılandırma dosyası
+├── _data                # Veri dosyaları (YAML, JSON)
+│   └── navigation.yml   # Navigasyon menüsü verisi
+├── _includes            # Parçalar (header, footer vb.)
+│   └── header.html      # Sayfa başı
+│   └── footer.html      # Sayfa altı
+├── _layouts             # Sayfa düzenleri (ana sayfa, arşiv sayfası vb.)
+│   └── default.html     # Varsayılan düzen
+│   └── ana_sayfa.html   # Ana sayfa düzeni
+│   └── archive.html     # Arşiv sayfası düzeni
+├── _posts               # Blog yazıları
+│   └── 2024-12-15-post.md  # Örnek yazı
+├── assets               # Stil, resimler ve JS dosyaları
+│   ├── css              # CSS dosyaları
+│   │   ├── style.css    # Ana stil dosyası
+│   │   └── custom.css   # Ek stil dosyası
+│   ├── images           # Resimler
+│   │   └── logo.png     # Logo resmi
+│   └── js               # JavaScript dosyaları
+│       └── main.js      # Ana JS dosyası
+├── _site                # Çıktı dosyaları (Jekyll tarafından otomatik olarak oluşturulur)
+├── index.md             # Ana sayfa içeriği (Markdown dosyası)
+└── Gemfile              # Proje bağımlılıkları
