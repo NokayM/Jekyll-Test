@@ -1,0 +1,121 @@
+/* custom.scss */
+
+.hero {
+    background-image: url('https://via.placeholder.com/1500x800');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+  }
+  
+  .hero__content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+  }
+  
+  .hero__content p {
+    font-size: 1.5em;
+  }
+  
+  .services {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .services h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+  }
+  
+  .service-block {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  }
+  
+  .service-card {
+    flex: 1;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    margin-bottom: 20px; /* Add some space between cards */
+  }
+  
+  .service-card img {
+    max-width: 100%;
+    border-radius: 5px;
+  }
+  
+  .service-card h3 {
+    margin-top: 20px;
+    font-size: 1.8em;
+  }
+  
+  .service-card p {
+    margin-top: 10px;
+    font-size: 1.2em;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  /* Media Queries for responsiveness */
+  @media (max-width: 768px) {
+    .hero {
+      padding: 50px 0;
+    }
+  
+    .hero__content h1 {
+      font-size: 2.5em;
+    }
+  
+    .hero__content p {
+      font-size: 1.2em;
+    }
+  
+    .container {
+      width: 90%;
+    }
+  
+    .services h2 {
+      font-size: 2em;
+    }
+  
+    .service-block {
+      flex-direction: column; /* Stack the cards on smaller screens */
+      align-items: center; /* Center the cards */
+    }
+  
+    .service-card {
+      width: 100%; /* Make cards full width on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero__content h1 {
+      font-size: 2em;
+    }
+  
+    .hero__content p {
+      font-size: 1em;
+    }
+  
+    .services h2 {
+      font-size: 1.8em;
+    }
+  }
+  

@@ -1,0 +1,11 @@
+<!-- _includes/header.html -->
+<header>
+    <nav>
+      <ul class="nav-menu">
+        {% for item in site.data.navigation %}
+          <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </header>
+  
